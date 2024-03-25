@@ -1,11 +1,24 @@
-let nome = prompt('Qual seu nome?');
-let idade = prompt('Qual sua idade?');
-let linguagem = prompt('Qual linguadem de programação você está estudando?');
+let nome;
+let idade;
+let linguagem;
+let mensagem;
 
-alert(`Olá ${nome}, você tem ${idade} e já está aprendendo ${linguagem}`);
+function exibirTextoNaTela(tag, texto) {
+    let campo = document.getElementById(tag);
+    campo.innerHTML = texto;  
+}
 
-let resposta; /* Inicair a declaração da VAR FOOORA DO LOOP */
-do{
+function infoRetorno(){
+    nome= document.getElementById('nome').value;
+    idade = document.getElementById('idade').value;
+    linguagem = document.getElementById('linguagem').value;
+    mensagem = `Olá ${nome}, você tem ${idade} e já está aprendendo ${linguagem}`;
+    return exibirTextoNaTela(`Informacao__retorno`, `${mensagem}`)
+}
+
+
+/* let resposta; /* Inicair a declaração da VAR FOOORA DO LOOP */
+/* do{
     resposta = prompt(`Você gosta de estudar JS? Responda com 1 para SIM e 2 para NÃO`);
         if(resposta=='1'){    
             alert('Muito bom! Continue estudando e você terá muito sucesso.')
@@ -13,4 +26,4 @@ do{
             alert('Que pena! Já tentou aprender outras linguagens?');
         }   else{ 
             alert('Informe um número corresponde as opções SIM ou NÃO')};
-        } while(resposta!=='1');
+        } while(resposta!=='1'); */

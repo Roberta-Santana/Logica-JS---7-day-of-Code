@@ -1,0 +1,10 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cabecalho{
+    padding: 10px;;
+}
+.cabecalho__menu{
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,5 +1,14 @@
 let escolha = prompt('Você deseja seguir para 1 Front-End ou 2 Back-End?');
 var escolha2;
+
+function exibirTextoNaTela(tag, texto) {
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+}
+exibirTextoNaTela('#Pergunta__inicial', 'Você deseja seguir para 1 Front-End ou 2 Back-End?');
+
+
+
     if(escolha=="1"){
         escolha="Front-End";
         escolha2 = prompt('Usando 1 React ou 2 Vue?');

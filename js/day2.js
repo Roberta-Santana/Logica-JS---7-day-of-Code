@@ -14,8 +14,7 @@ function infoRetorno(){
     linguagem = document.getElementById('linguagem').value;
     mensagem = `Olá ${nome}, você tem ${idade} e já está aprendendo ${linguagem}`;
     //MÉTODO PARA REVELAR A CLASSE APÓS O CLIK DO BOTÃO DA CLASSE ANTERIOR
-    let msg = document.querySelector('.Atividade02');
-    msg.classList.toggle('reveal');
+    document.querySelector('.Atividade02').classList.toggle('reveal');
     return exibirTextoNaTela(`Informacao__retorno`, `${mensagem}`),exibirTextoNaTela(`Pergunta`, `Você gosta de estudar ${linguagem}?`);
 }
 

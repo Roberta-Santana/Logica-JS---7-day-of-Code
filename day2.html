@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia 2- #7DaysOfCode</title>
     <script src="./js/day2.js"></script>
+    <style>
+    .Atividade02{
+        visibility: hidden;
+        }
+    .reveal{
+    visibility: visible;
+    }
+    </style>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <a class="cabecalho__menu__link" href="#Atividade01">Atividade 01</a>
+            <a class="cabecalho__menu__link" href="#Atividade02">Atividade 02</a>
+        </nav>
+    </header>
     <main>
-        <section class="Informacao">
+        <section id="Atividade01" class="Atividade">
             <div class="Informacao__texto">
             <h1>#7DaysOfCode - Dia 2</h1>
             <p>Qual seu nome?</p>
@@ -25,8 +38,14 @@
             </div>
             <h1 id="Informacao__retorno"></h1>
         </section>
-        <section class="Parte2">
-            <h1>CRIAR UM ALERT APÓS UM RADIOBUTTON</h1>
+        <section id="Atividade02" class="Atividade02">
+            <p id="Pergunta"></p>
+            <input type="radio" id="sim" name="opcao" value="Sim">
+            <label for="sim">Sim</label>
+            <input type="radio" id="nao" name="opcao" value="Nao">
+            <label for="nao">Não</label>
+            <button onclick="mostrarEscolha()">Mostrar Escolha</button>
+            <p id="escolha__resultado"></p>
         </section>
 
     </main>

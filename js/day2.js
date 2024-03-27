@@ -13,7 +13,27 @@ function infoRetorno(){
     idade = document.getElementById('idade').value;
     linguagem = document.getElementById('linguagem').value;
     mensagem = `Olá ${nome}, você tem ${idade} e já está aprendendo ${linguagem}`;
-    return exibirTextoNaTela(`Informacao__retorno`, `${mensagem}`)
+    //MÉTODO PARA REVELAR A CLASSE APÓS O CLIK DO BOTÃO DA CLASSE ANTERIOR
+    let msg = document.querySelector('.Atividade02');
+    msg.classList.toggle('reveal');
+    return exibirTextoNaTela(`Informacao__retorno`, `${mensagem}`),exibirTextoNaTela(`Pergunta`, `Você gosta de estudar ${linguagem}?`);
+}
+
+
+function mostrarEscolha(){
+    var radios = document.getElementsByName('opcao');
+    var escolha;
+    for(var i=0; i<radios.length;i++){
+        if(radios[i].checked){
+            escolha= radios[i].value;
+            break;
+        }
+    }
+    if (escolha=='Sim') {
+        document.getElementById('escolha__resultado').innerHTML = 'Muito bom! Continue estudando e você terá muito sucesso.';
+      } else  {
+        document.getElementById('escolha__resultado').innerHTML = 'Que pena! Tente aprender outras linguagens.';
+      }
 }
 
 

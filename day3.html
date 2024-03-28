@@ -5,20 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia 3 - #7DaysOfCode</title>
     <script src="./js/day3.js"></script>
+    <style>
+        .framework, .linguagem, .futuro{
+            display: none;
+        }
+        .reveal{
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
     </header>
     <main>
-        <section class="Atividade01">
-            <p id="Pergunta__inicial"></p>
-            <input type="radio" id="=1" name="opcao" value="1">
-            <label for="1">1 - Front-end</label>
-            <input type="radio" id="=2" name="opcao" value="2">
-            <label for="2">2 - Back-end</label>
-            <button 
-
+        <section class="areas">
+            ESCONDENDO TODAS AS SECTIONS SEGUINTES, 
+            CASSLIST.TOGGLE DEPENDENDO DA OPÇÃO, USANDO JS
+            <p class="area__pergunta">Você deseja seguir para Front-End ou Back-End?</p>
+            <input type="radio" id="area__front" name="area__opcao" value="Front-end">
+            <label for="area__front">Front-end</label>
+            <input type="radio" id="area__back" name="area__opcao" value="Back-end">
+            <label for="area__back">Back-end</label>
+            <div class="area__botao"></div>
+            <button onclick="areaButton()" class="button">Clique</button>
         </section>
+        <section class="framework">
+            <p>Usando como framework React ou Vue?</p>
+            <input type="radio" id="=opcao_react" name="framework__opcao" value="React">
+            <label for="opcao_react">React</label>
+            <input type="radio" id="=opcao_vue" name="framework__opcao" value="Vue">
+            <label for="opcao_vue">Vue</label>
+            <div class="framework__botao">
+            <button onclick="frameworkButton()" class="button">Clique</button>
+            </div>
+        </section>
+
+        <section class="linguagem">
+            <p>Usando como framework React ou Vue?</p>
+            <input type="radio" id="=opcao_c#" name="linguagem__opcao" value="C#">
+            <label for="opcao_c#">React</label>
+            <input type="radio" id="=opcao_java" name="linguagem__opcao" value="Java">
+            <label for="opcao_java">Vue</label>
+            <div class="linguagem__botao">
+            <button onclick="linguagemButton()" class="button">Clique</button>
+            </div>
+        </section>
+
+        <section class="futuro">
+            <p id="futuro__pergunta"></p>
+        </section>
+
+
     </main>
     <footer>
     </footer>

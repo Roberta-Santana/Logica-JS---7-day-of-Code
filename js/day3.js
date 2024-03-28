@@ -1,20 +1,41 @@
-let escolha = prompt('Você deseja seguir para 1 Front-End ou 2 Back-End?');
-var escolha2;
+let area; /* áreas: Front ou Back */
+let framework; /*  */
 
-function exibirTextoNaTela(tag, texto) {
-    let campo = document.querySelector(tag);
+function exibirTextoNaTela(tag, texto){
+    let campo = document.getElementById(tag);
     campo.innerHTML = texto;
 }
-exibirTextoNaTela('#Pergunta__inicial', 'Você deseja seguir para 1 Front-End ou 2 Back-End?');
 
 
 
-    if(escolha=="1"){
+function areaButton() {
+    var radios = document.getElementsByName('area__opcao');
+    for(var i=0;i<radios.length;i++){
+        if(radios[i].checked){
+            area=radios[i].value;/* RECEBE O VALUE DA OPÇÃO CHECKED */}
+    }
+    if(area=="Front-end"){/* VALUE */
+        document.querySelector('.framework').classList.toggle('reveal')}
+        else if(area=='Back-end'){
+            document.querySelector('.linguagem').classList.toggle('reveal')}
+}
+
+function frameworkButton(){
+    var radios = document.getElementsByName('framework__opcao');
+    for(var i=0;i<radios.length;i++){
+        if(radios[i].checked){
+            framework=radios[i].value;/* RECEBE O VALUE DA OPÇÃO CHECKED */}
+    }
+    document.querySelector('.futuro').classList.toggle('reveal')
+    return exibirTextoNaTela('futuro__pergunta',`Olá Dev, você está aprendendo ${area} com o framework ${framework}`);
+    }
+
+/*     if(escolha=="1"){
         escolha="Front-End";
         escolha2 = prompt('Usando 1 React ou 2 Vue?');
         switch (escolha2){
             case "1": /* OPÇÃO INSERIDA - CONSIDERANDO JS EM STRING LET OU VAR??INDEPENDENTE DO TIPO  É STRING*/
-            alert(`Você esta buscando uma carreira de ${escolha} com React.`);
+/*            alert(`Você esta buscando uma carreira de ${escolha} com React.`);
             break;
             case "2": alert(`Você esta buscando uma carreira de ${escolha} com Vue.`);
         }
@@ -27,5 +48,5 @@ exibirTextoNaTela('#Pergunta__inicial', 'Você deseja seguir para 1 Front-End ou
             break;
             case "2": alert(`Você esta buscando uma carreira de ${escolha} com Java.`);
         }
-    }   
+    }   */ 
 
